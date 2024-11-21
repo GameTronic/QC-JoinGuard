@@ -1,0 +1,68 @@
+name: QC-JoinGuard
+version: '${project.version}'
+description: "JoinGuard is a powerful Minecraft plugin and web service duo designed to shield your server from disruptive players. This comprehensive solution not only blocks harmful players from joining but also enables server owners to report offenders directly through an integrated web platform. With seamless reporting, blacklisting, and robust security features, JoinGuard provides peace of mind and keeps your community safe from unwanted behavior."
+main: me.quackduck.qcjoinguard.QC_JoinGuard
+api-version: '1.13'
+author: QuackDuck
+website: https://quackcode.pl
+
+commands:
+  joinguard:
+    usage: /<command>
+    aliases: [ qjoinguard, qjg, jg ]
+permissions:
+  qc.joinguard.*:
+    description: All joinguard permissions.
+    children:
+      qc.joinguard.cmd: true
+      qc.joinguard.cmd.report: true
+      qc.joinguard.cmd.login: true
+      qc.joinguard.cmd.list: true
+      qc.joinguard.cmd.reload: true
+      qc.joinguard.cmd.whitelist: true
+      qc.joinguard.cmd.alts: true
+      qc.joinguard.cmd.maintenance: true
+      qc.joinguard.cmd.version: true
+      qc.joinguard.cmd.update: true
+      qc.joinguard.logger: true
+      qc.joinguard.bypass.concurrent: true
+      qc.joinguard.bypass.maintenance: true
+  qc.joinguard.cmd:
+    description: Access to /joinguard command.
+    default: op
+  qc.joinguard.cmd.report:
+    description: Allows you to report harmful players.
+    default: op
+  qc.joinguard.cmd.login:
+    description: Allows you to log in to JoinGuard, allowing you to report new harmful players.
+    default: op
+  qc.joinguard.cmd.list:
+    description: Allows you to view the list of blocked players.
+    default: op
+  qc.joinguard.cmd.reload:
+    description: Allows you to reload the plugin.
+    default: op
+  qc.joinguard.cmd.whitelist:
+    description: Allows you to manage the whitelist.
+    default: op
+  qc.joinguard.cmd.alts:
+    description: Allows you to view a player’s alternate accounts.
+    default: op
+  qc.joinguard.cmd.maintenance:
+    description: Allows you to toggle maintenance mode.
+    default: op
+  qc.joinguard.cmd.version:
+    description: Allows you to view the plugin version.
+    default: op
+  qc.joinguard.cmd.update:
+    description: Allows you to update the plugin to the latest version.
+    default: op
+  qc.joinguard.logger:
+    description: Receive notifications of blocked join attempts.
+    default: op
+  qc.joinguard.bypass.concurrent:
+    description: Bypass concurrent connection limit.
+    default: op
+  qc.joinguard.bypass.maintenance:
+    description: Allows you to join the server during maintenance mode.
+    default: op

@@ -1,0 +1,46 @@
+#
+# QC-JoinGuard Config
+#    by QuackDuck
+#
+
+# Server api key
+api-key: "API_KEY"
+
+# Message when blocked player is trying to log in
+kick-message: "&cThis server is protected by JoinGuard."
+
+# Whitelisted players that are allowed to join the server even if they are blocked.
+whitelist: []
+
+# Concurrent connections
+# Maximum number of concurrent connections from the same IP
+concurrent-connections:
+  # Maximum number of concurrent connections, set to 0 to disable
+  max: 3
+  # Kick message when the limit is reached
+  kick-message: "&cToo many players connected from your IP."
+  # Is bypass permission working?
+  # Players with 'qc.joinguard.bypass.concurrent' permission bypass the limit if true
+  bypass: true
+
+# Maintenance mode
+# Only operators with 'qc.joinguard.bypass.maintenance' permission can join
+maintenance:
+  # Enable maintenance mode
+  enabled: false
+  # Kick message when maintenance mode is enabled
+  message: "&cThe server is currently under maintenance. Please try again later."
+  # Kick all players when maintenance mode is turned on
+  kick-all: true
+
+# Logger
+# Should blocked join attempts be logged?
+logger:
+  # Log to file
+  file: true
+  # Log to console
+  console: false
+  # Log to online operators with 'qc.joinguard.logger' permission
+  operator: false
+
+# End of file
