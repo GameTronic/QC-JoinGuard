@@ -279,7 +279,7 @@ public class Cmd implements CommandExecutor {
 					if (Config.getBoolean("maintenance.kick-all", true)) {
 						for (Player p : Bukkit.getOnlinePlayers()) {
 							if (!p.hasPermission("qc.joinguard.bypass.maintenance") && !p.isOp()) {
-								p.kickPlayer(Colors.color(Config.getString("maintenance.kick-message")));
+								p.kickPlayer(Colors.color(Config.getString("maintenance.message")));
 							}
 						}
 					}
