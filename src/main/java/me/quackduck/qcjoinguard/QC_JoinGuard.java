@@ -1,15 +1,15 @@
 package me.quackduck.qcjoinguard;
 // Created by QuackDuck
-import me.quackduck.qcjoinguard.api.Api;
+
+import me.quackduck.qcjoinguard.api.Auth;
+import me.quackduck.qcjoinguard.api.Blocked;
 import me.quackduck.qcjoinguard.cmds.Cmd;
 import me.quackduck.qcjoinguard.cmds.CmdComplete;
+import me.quackduck.qcjoinguard.files.Alts;
+import me.quackduck.qcjoinguard.files.Updater;
 import me.quackduck.qcjoinguard.listeners.JoinListener;
 import me.quackduck.qcjoinguard.listeners.LoginListener;
 import me.quackduck.qcjoinguard.listeners.QuitListener;
-import me.quackduck.qcjoinguard.files.Alts;
-import me.quackduck.qcjoinguard.api.Auth;
-import me.quackduck.qcjoinguard.api.Blocked;
-import me.quackduck.qcjoinguard.files.Updater;
 import me.quackduck.qcjoinguard.misc.Colors;
 import me.quackduck.qcjoinguard.schedulers.AutoSave;
 import me.quackduck.qcjoinguard.schedulers.UpdateLists;
