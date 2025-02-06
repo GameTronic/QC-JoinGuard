@@ -1,6 +1,7 @@
 package me.quackduck.qcjoinguard.schedulers;
 // Created by QuackDuck
 import me.quackduck.qcjoinguard.QC_JoinGuard;
+import me.quackduck.qcjoinguard.api.Api;
 import me.quackduck.qcjoinguard.api.Blocked;
 import me.quackduck.qcjoinguard.misc.Utils;
 import org.bukkit.Bukkit;
@@ -12,6 +13,7 @@ public class UpdateLists {
 
     public static void start() {
         id = Bukkit.getScheduler().scheduleSyncRepeatingTask(QC_JoinGuard.plugin, () -> {
+            checkServerIP();
             updateNames();
             updateUuids();
             updateIps();
@@ -21,6 +23,12 @@ public class UpdateLists {
     public static void stop() {
         Utils.cancelTask(id);
         id = null;
+    }
+
+    private static void checkServerIP() {
+        if (QC_JoinGuard.plugin.getServerIP().equals("ERROR")) {
+            QC_JoinGuard.plugin.setServerIP(Api.getServerIP());
+        }
     }
 
     private static void updateNames() {

@@ -329,7 +329,7 @@ public class Cmd implements CommandExecutor {
 		JSONObject reportingJson = new JSONObject();
 		reportingJson.put("nick", reporter.getName());
 		JSONObject serverJson = new JSONObject();
-		serverJson.put("ip", Api.getServerIP());
+		serverJson.put("ip", QC_JoinGuard.plugin.getServerIP());
 		serverJson.put("port", Bukkit.getPort());
 		JSONObject reportJson = new JSONObject();
 		reportJson.put("reported", reportedJson);

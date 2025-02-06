@@ -1,5 +1,6 @@
 package me.quackduck.qcjoinguard;
 // Created by QuackDuck
+import me.quackduck.qcjoinguard.api.Api;
 import me.quackduck.qcjoinguard.cmds.Cmd;
 import me.quackduck.qcjoinguard.cmds.CmdComplete;
 import me.quackduck.qcjoinguard.listeners.JoinListener;
@@ -25,6 +26,7 @@ public final class QC_JoinGuard extends JavaPlugin {
     public static QC_JoinGuard plugin;
     public static String prefix;
     private boolean isGuarded;
+    private String serverIP = "ERROR";
 
     @SuppressWarnings("DataFlowIssue")
     @Override
@@ -78,5 +80,13 @@ public final class QC_JoinGuard extends JavaPlugin {
 
     public boolean isGuarded() {
         return isGuarded;
+    }
+
+    public String getServerIP() {
+        return serverIP;
+    }
+
+    public void setServerIP(String serverIP) {
+        this.serverIP = serverIP;
     }
 }

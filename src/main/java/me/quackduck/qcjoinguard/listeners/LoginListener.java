@@ -29,7 +29,7 @@ public class LoginListener implements Listener {
         Player player = e.getPlayer();
         String ip = Api.getPlayerIP(player);
         if (ip.equals("ERROR")) ip = e.getRealAddress().getHostAddress();
-        String serverIp = Api.getServerIP();
+        String serverIp = QC_JoinGuard.plugin.getServerIP();
         if (!net.isAnyLocalAddress() && !net.isLoopbackAddress()) {
             checkAlts(player, ip, serverIp);
         }
